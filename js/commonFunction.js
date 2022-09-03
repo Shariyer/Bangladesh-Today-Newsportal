@@ -1,5 +1,14 @@
-const displayNews = (category) => {
+const displayNews = (category,newstype) => {
     console.log(category);
+    const length = category.length;
+    if (length === 0) {
+       document.getElementById('search-result').innerText = "No News item found "; 
+    }
+    else {
+        const searchResult = `${length} items found for ${newstype} `
+    document.getElementById('search-result').innerText = searchResult;
+    }
+
 
     const newsContainer = document.getElementById('news-container');
     newsContainer.textContent = '';

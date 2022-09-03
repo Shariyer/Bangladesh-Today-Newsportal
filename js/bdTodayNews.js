@@ -4,7 +4,7 @@ document.getElementById('breaking-news').addEventListener('click', function () {
     
     fetch('https://openapi.programming-hero.com/api/news/category/01')
         .then(res => res.json())
-        .then(data => displayNews(data.data))
+        .then(data => displayNews(data.data,'Breaking News'))
         .catch(error => console.log(error));
 });
 
@@ -14,7 +14,7 @@ document.getElementById('regular-news').addEventListener('click', function () {
     
     fetch('https://openapi.programming-hero.com/api/news/category/02')
         .then(res => res.json())
-        .then(data => displayNews(data.data))
+        .then(data => displayNews(data.data,'Regular News'))
         .catch(error => console.log(error));
     console.log(data.data)
 });
@@ -25,7 +25,7 @@ document.getElementById('international-news').addEventListener('click', function
     
     fetch('https://openapi.programming-hero.com/api/news/category/03')
         .then(res => res.json())
-        .then(data => displayNews(data.data))
+        .then(data => displayNews(data.data,'International News'))
         .catch(error => console.log(error));
     console.log(data.data)
 });
@@ -35,7 +35,7 @@ document.getElementById('sports').addEventListener('click', function () {
     
     fetch('https://openapi.programming-hero.com/api/news/category/04')
         .then(res => res.json())
-        .then(data => displayNews(data.data))
+        .then(data => displayNews(data.data,'Sports News'))
         .catch(error => console.log(error));
     console.log(data.data)
 });
@@ -45,7 +45,7 @@ document.getElementById('entertainment').addEventListener('click', function () {
     
     fetch('https://openapi.programming-hero.com/api/news/category/05')
         .then(res => res.json())
-        .then(data => displayNews(data.data))
+        .then(data => displayNews(data.data,'Entertainment News'))
         .catch(error => console.log(error));
     console.log(data.data)
 });
@@ -55,7 +55,7 @@ document.getElementById('culture').addEventListener('click', function () {
     
     fetch('https://openapi.programming-hero.com/api/news/category/06')
         .then(res => res.json())
-        .then(data => displayNews(data.data))
+        .then(data => displayNews(data.data,'Cultural News'))
         .catch(error => console.log(error));
     console.log(data.data)
 });
@@ -66,7 +66,7 @@ document.getElementById('arts').addEventListener('click', function () {
     
     fetch('https://openapi.programming-hero.com/api/news/category/07')
         .then(res => res.json())
-        .then(data => displayNews(data.data))
+        .then(data => displayNews(data.data,'Arts News'))
         .catch(error => console.log(error));
     console.log(data.data)
 });
@@ -76,7 +76,7 @@ document.getElementById('all-news').addEventListener('click', function () {
     
     fetch('https://openapi.programming-hero.com/api/news/category/08')
         .then(res => res.json())
-        .then(data => displayNews(data.data))
+        .then(data => displayNews(data.data,'All News'))
         .catch(error => console.log(error));
     console.log(data.data)
 });
@@ -88,7 +88,7 @@ document.getElementById('home').addEventListener('click', function () {
     
     fetch('https://openapi.programming-hero.com/api/news/category/08')
         .then(res => res.json())
-        .then(data => displayNews(data.data))
+        .then(data => displayNews(data.data,'All News'))
         .catch(error => console.log(error));
     console.log(data.data)
 });
@@ -98,7 +98,7 @@ document.getElementById('nav-home').addEventListener('click', function () {
     
     fetch('https://openapi.programming-hero.com/api/news/category/08')
         .then(res => res.json())
-        .then(data => displayNews(data.data))
+        .then(data => displayNews(data.data,'All News'))
         .catch(error => console.log(error));
     console.log(data.data)
 });
@@ -109,7 +109,7 @@ document.getElementById('bd').addEventListener('click', function () {
     
     fetch('https://openapi.programming-hero.com/api/news/category/08')
         .then(res => res.json())
-        .then(data => displayNews(data.data))
+        .then(data => displayNews(data.data,'All News'))
         .catch(error => console.log(error));
     console.log(data.data)
 });
@@ -119,7 +119,7 @@ document.getElementById('news').addEventListener('click', function () {
     
     fetch('https://openapi.programming-hero.com/api/news/category/08')
         .then(res => res.json())
-        .then(data => displayNews(data.data))
+        .then(data => displayNews(data.data,'All News'))
         .catch(error => console.log(error));
     console.log(data.data)
 });
