@@ -32,12 +32,12 @@ const displayNews = (category,newstype) => {
                                     <div class="d-flex justify-content-center align-items-center">
                                         <i class="fa-solid fa-user fs-1 bg-success p-2 rounded-circle mb-3"></i>
                                         <div class="d-flex flex-column justify-content-center align-items-center">
-                                            <h6 class=" fs-6">${news.author.name}</h6>
-                                            <p class="ms-5">${news.author.published_date}</p>
+                                            <h6 class=" fs-6">${news.author.name? news.author.name:'No info found'}</h6>
+                                            <p class="ms-5">${news.author.published_date? news.author.published_date:'No info found'}</p>
                                         </div>
                                     </div>
                                     <div>
-                                        <i class="fa-regular fa-eye"><span><span>${news.total_view}</span>m</span></i>
+                                        <i class="fa-regular fa-eye"><span>${news.total_view ? news.total_view+' M' :' No info found' }</span></i>
                 
                                     </div>
                                     <div>
