@@ -14,7 +14,7 @@
 <body class="container">
     <!-- header -->
     <header >
-        <!-- navbar -->
+        <!-- navbar starts-->
         <nav class="">
             <nav class="navbar navbar-expand-lg bg-light shadow-lg mt-3">
                 <div class="container-fluid">
@@ -31,13 +31,35 @@
                         </ul>
                         <div style="width: 10rem;" class="d-lg-flex  justify-content-lg-between  me-5" role="search">
                             
-                            <button class="btn btn-outline-success fw-semibold px-3" type="submit">News</button>
-                            <button class="btn btn-outline-success fw-semibold px-3" type="submit">Blog</button>
+                            <button class="btn btn-outline-success fw-semibold px-3">News</button>
+                            <!-- modal button  -->
+                            <button class="btn btn-outline-success fw-semibold px-3" data-bs-toggle="modal" data-bs-target="#blog">Blog</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="blog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Question and Answer</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div style="width: 90%;" class="modal-body">
+                                            <p>lorem</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </nav>
         </nav>
+        <!---------- navbar ends -->
+
+
+
         <!-- horizontal row line -->
         <div >
             <hr class="mt-5 mb-5 d-flex justify-content-center">
@@ -99,7 +121,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> 
     </main>
     <!-- main ends -->
 
