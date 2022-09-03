@@ -17,6 +17,7 @@ const displayNews = (category,newstype) => {
 
         newDiv.classList.add('row');
         newDiv.classList.add('g-5');
+        newDiv.classList.add('mt-5');
 
         newDiv.innerHTML = `
         <div class="col-lg-3">
@@ -30,7 +31,8 @@ const displayNews = (category,newstype) => {
                                     class="d-lg-flex justify-content-lg-between  text-center align-items-lg-center ">
                 
                                     <div class="d-flex justify-content-center align-items-center">
-                                        <i class="fa-solid fa-user fs-1 bg-success p-2 rounded-circle mb-3"></i>
+                                        
+                                    <img style="width: 4rem; height:4rem;" class="img-fluid rounded-circle" src="${news.author.img}" >
                                         <div class="d-flex flex-column justify-content-center align-items-center">
                                             <h6 class=" fs-6">${news.author.name? news.author.name:'No info found'}</h6>
                                             <p class="ms-5">${news.author.published_date? news.author.published_date:'No info found'}</p>
@@ -51,4 +53,5 @@ const displayNews = (category,newstype) => {
         
         newsContainer.appendChild(newDiv)
     }
+    spinner(false);
 }
