@@ -1,3 +1,5 @@
+
+
 const displayNews = (newsCategory, newstype) => {
     // array sortig 
     Array.prototype.sortBy = function(p) {
@@ -7,7 +9,7 @@ const displayNews = (newsCategory, newstype) => {
 }
     // sorting by total_view   
     const category = newsCategory.sortBy('total_view');
-    console.log(category);
+    // console.log(category);
     // checking length of array for search result 
     const length = category.length;
     if (length === 0) {
@@ -38,7 +40,7 @@ const displayNews = (newsCategory, newstype) => {
                             <img src="${news.thumbnail_url}" class="img-fluid rounded img">
                         </div>
                         <div class="col-lg-9 ">
-                            <div onclick="showDetails('${news.category_id}')" class="card-body d-lg-flex flex-lg-column ">
+                            <div onclick="loadDetails('${news._id}')" class="card-body d-lg-flex flex-lg-column" data-bs-toggle="modal" data-bs-target="#showDetailsModal">
                                 <h5 class="card-title">${news.title}</h5>
                                 <p class="card-text">${ details+'...'}</p>
                                 <div style="width:100%;"
@@ -64,7 +66,9 @@ const displayNews = (newsCategory, newstype) => {
                                         <i class="fa-solid fa-star-half-stroke text-warning"></i>
                                     </div>
                                     <div>
-                                      <i class="fa-solid fa-right-long fs-1 p-3 text-white bg-success rounded-circle"></i>  
+
+                                      <i onclick="loadDetails('${news._id}')" class="fa-solid fa-right-long fs-1 p-3 text-white bg-success rounded-circle"data-bs-toggle="modal" data-bs-target="#showDetailsModal"></i>
+                                     
                                     </div>
                                 </div>
                             </div>
@@ -76,49 +80,37 @@ const displayNews = (newsCategory, newstype) => {
     }
     // stoping spinner 
     spinner(false);
+
 }
+
 // show details in modal
-const showDetails = (catagoryID) => {
-    console.log(catagoryID +'modal');
-    const url = `https://openapi.programming-hero.com/api/news/category/${catagoryID}`
+const loadDetails = (newsID) => {
+    // console.log(newsID+ 'modal');
+    
+    const url = `https://openapi.programming-hero.com/api/news/${newsID}`
+
     fetch(url)
         .then(res => res.json())
-        .then(data => console.log(data.data))
+        .then(data => showModal(data.data[0]))
         .catch(error => console.log(error));
     
     
 }
 
-// const showModal = (array) => {
-//     console.log(array);
-//     const showModal = document.getElementById('showDetailsModal');
+const showModal = (specificNews) => {
 
+    // console.log(specificNews);
 
-//     for (element of array) {
-
-//         const newModal = document.createElement('div');
-//         newModal.classList.add('modal-dialog');
-                            
-//         newModal.innerHTML = `  
-//                                     <div class="modal-content">
-//                                         <div class="modal-header">
-//                                             <h5 class="modal-title" id="exampleModalLabel">Question and Answer</h5>
-//                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-//                                         </div>
-//                                         <div style="width: 90%;" class="modal-body">
-//                                             <p>lorem</p>
-//                                         </div>
-//                                         <div class="modal-footer">
-//                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-//                                         </div>
-//                                     </div>    
-//                            `;
+    const modalTitle = document.getElementById('title');
+    modalTitle.innerText = specificNews.title;
+    const modalContainer=document.getElementById('modal-container')
+    modalContainer.innerHTML = `
+                               <img class="img-fluid" src="${specificNews.thumbnail_url}">
+                                <p>${specificNews.details}</p>
+    `
     
-//         showModal.appendChild(newModal);
-//     }
-                                    
-                                
-                            
-// }
+    // const modalContainer = document.getElementById('modal-container'); 
+    
+}
 
                             
