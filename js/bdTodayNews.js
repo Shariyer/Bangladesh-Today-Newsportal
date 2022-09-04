@@ -124,6 +124,7 @@ document.getElementById('news').addEventListener('click', function () {
     
 });
 
+// spinner function 
 const spinner = isLoading => {
     const sinnerLoader=document.getElementById('spinner')
     if (isLoading) {

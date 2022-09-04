@@ -95,7 +95,7 @@ const loadDetails = (newsID) => {
         .catch(error => console.log(error));
     
     
-}
+};
 
 const showModal = (specificNews) => {
 
@@ -103,14 +103,16 @@ const showModal = (specificNews) => {
 
     const modalTitle = document.getElementById('title');
     modalTitle.innerText = specificNews.title;
-    const modalContainer=document.getElementById('modal-container')
+    const modalContainer = document.getElementById('modal-container')
     modalContainer.innerHTML = `
                                <img class="img-fluid" src="${specificNews.thumbnail_url}">
                                 <p>${specificNews.details}</p>
-    `
+    `;
     
-    // const modalContainer = document.getElementById('modal-container'); 
-    
-}
+};
 
-                            
+       // for automatically loading 
+       fetch('https://openapi.programming-hero.com/api/news/category/08')
+        .then(res => res.json())
+        .then(data => displayNews(data.data,'All news'))
+        .catch(error => console.log(error)); 

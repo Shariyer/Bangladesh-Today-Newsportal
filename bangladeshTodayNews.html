@@ -35,7 +35,7 @@
                             <button id="news" class="btn btn-outline-success fw-semibold px-3">News</button>
                             <!-- modal button  -->
                             <button class="btn btn-outline-success fw-semibold px-3" data-bs-toggle="modal" data-bs-target="#blog">Blog</button>
-                            <!-- Modal -->
+                            <!-- Modal for blog -->
                             <div class="modal fade" id="blog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
@@ -44,7 +44,12 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div style="width: 90%;" class="modal-body">
-                                            <p>lorem</p>
+                                            <h3 class="text-danger">Difference between var , let and const</h3>
+                                            <p>Ans: Before comming ES6 var was used to declare variable in js. var can be redeclared and updated anywhere but let only allows us to declare a variable once. Right now after invention of ES-6 let is used to declare variable. And const is something that after declaring something as const it won't let redeclare or update it's fixed</p>
+                                            <h3 class="text-danger">Difference between arrow function and regular function</h3>
+                                            <p>Ans: Arrow functions are only callable not constructible whereas, regular functions are both callable and constructible. Arrow function canot invoked with 'new' keyword on the other hand, we can use in regular function. when we use 'this' inside a regular function it refers the property of that object where it stays or inside the blockscope.But if we do the same inside an arrow function it refers window object or property and makes it global. </p>
+                                            <h3 class="text-danger">Difference between forEach,filter and find</h3>
+                                            <p>Ans: forEach is just a loop. It only executes the callback. whereas, filter loop through every element and check condition. filter returns every condition that match or true from an array. but incase of find, it only returns the element that will match first for that condition.</p>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -102,7 +107,7 @@
         <section>    
             
             
-            <!-- Modal -->
+            <!-- Modal for news details -->
             <div class="modal fade" id="showDetailsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
